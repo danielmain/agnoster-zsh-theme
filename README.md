@@ -10,6 +10,71 @@ This theme is optimized for people who want to see the current Bitcoin Gold USD 
 
 For Mac users, I highly recommend iTerm 2 + Solarized Dark
 
+# Installation
+
+## MacOs Users
+
+- Install Homebrew
+	```
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	```
+- Install git and other tools using Homebrew 
+	```
+	brew install git curl wget
+	```
+- Install zsh using Homebrew
+	```
+	brew install zsh zsh-completions
+	```
+- Set zsh as your default shell
+	```
+	chsh -s $(which zsh)
+	```
+- Install oh-my-zsh
+	```
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	```
+- Download the theme
+	```
+	wget https://raw.githubusercontent.com/danielmain/zsh-btg-theme/master/btg.zsh-theme -P ~/.oh-my-zsh/themes/
+	```
+- Edit your .zshrc and change the theme to
+	```
+	ZSH_THEME="btg"
+	```
+
+## Linux (debian based) Users
+
+- Install git and other tools using Homebrew 
+	```
+	apt-get install git curl wget
+	```
+- Install zsh using Homebrew
+	```
+	apt-get install zsh
+	```
+- Set zsh as your default shell
+	```
+	chsh -s $(which zsh)
+	```
+- Install oh-my-zsh
+	```
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	```
+- Download the theme
+	```
+	wget https://raw.githubusercontent.com/danielmain/zsh-btg-theme/master/btg.zsh-theme -P ~/.oh-my-zsh/themes/
+	```
+- Edit your .zshrc and change the theme to
+	```
+	ZSH_THEME="btg"
+	```
+
+## Windows Users
+
+- Format and install Liunx :-)
+
+
 # Compatibility
 
 **NOTE:** In all likelihood, you will need to install a [Powerline-patched font](https://github.com/Lokaltog/powerline-fonts) for this theme to render correctly.
