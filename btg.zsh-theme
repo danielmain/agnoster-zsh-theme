@@ -105,8 +105,9 @@ prompt_btg() {
   if [ $(( $(date +%s) - $(date +%s -r $HOME/.coinmarketcap-btg.json) )) -gt 60 ]; then
     curl -s https://api.coinmarketcap.com/v1/ticker/bitcoin-gold/ > $HOME/.coinmarketcap-btg.json || exit 1
   fi 
-  readonly BTG_PRICE=(`cat $HOME/.coinmarketcap-btg.json | grep -Po '(?<="price_usd": ")[^"]*'`)
-  prompt_segment red $PRIMARY_FG ${BTG_PRICE}
+  BTG_PRICE=(`cat $HOME/.coinmarketcap-btg.json | grep -Po '(?<="price_usd": ")[^"]*'`)
+  BTG_PRICE=" Bitcoin Gold: \$$BTG_PRICE "
+  prompt_segment yellow $PRIMARY_FG ${BTG_PRICE}
 	return 1
 }
 
